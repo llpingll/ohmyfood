@@ -11,12 +11,105 @@
 body {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
+    text-align: center;
 }
 
-h1 {
+/* h1 {
     font-family: 'Shrikhand', cursive;
-}
-/* 412 max width */
+} */
+
 .content {
     max-width: 412px;
+    margin: 0 auto;
+}
+
+/* Header */
+nav > :first-child {
+    /* border: 2px solid green; */
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    box-shadow: 0px 6px 4px -4px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav img {
+    width: 140px;
+}
+
+.location {
+    /* border: 2px solid red; */
+    background: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    gap: 10px;
+}
+
+.location p {
+    font-weight: 500;
+}
+
+.explore {
+    background-color: #F6F6F6;
+    padding: 30px 0 50px;
+}
+
+.explore p {
+    color: #313131c2;
+    padding: 35px 0;
+}
+
+.explore a {
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 24px;
+    color: white;
+    background-image: linear-gradient(to bottom right, #FF79DA , #9356DC);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+}
+
+/* Info */
+.info {
+    /* border: 2px solid red; */
+    padding: 35px 15px;
+    text-align: left;
+}
+
+.instructions {
+    /* border: 2px solid green; */
+    padding: 30px 0 30px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.instructions div {
+    /* border: 2px solid red; */
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 18px 0px;
+    background: #F6F6F6;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.instructions div:hover {
+    transform: scale(1.05);
+}
+
+.instructions p:first-child {
+    background: #9356DC;
+    font-size: 14px;
+    color: white;
+    border-radius: 12px;
+    padding: 3px 7px;
+    margin-left: -12px;
 }
