@@ -62,13 +62,20 @@ nav img {
     padding: 35px 0;
 }
 
-.explore a {
+.explore a,
+.selected a {
     text-decoration: none;
     padding: 12px;
     border-radius: 24px;
     color: white;
     background-image: linear-gradient(to bottom right, #FF79DA , #9356DC);
     box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+    min-width: 189px;
+    align-self: center;
+}
+
+.selected a {
+    margin: 30px 0 40px 0;
 }
 
 /* Info */
@@ -103,10 +110,11 @@ nav img {
 
 .instructions div:hover{
     transform: scale(1.05);
+    background: rgba(147, 86, 220, 0.15);
 }
 
 .instructions p:first-child {
-    background: #9356DC;
+    background: hwb(267 34% 14%);
     font-size: 14px;
     color: white;
     border-radius: 12px;
@@ -157,18 +165,143 @@ img[alt="image of the enchanted plate"] {
     margin-top: -170px;
 }
 
+.card i {
+    font-size: 20px;
+}
+
 .restaurant-info {
-    /* border: 2px solid green; */
+    /* border: 2px solid blue; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    padding: 0 10px;
+    padding: 0 15px;
+    text-align: left;
 }
 
 .restaurant-info div p:first-child {
     /* border: 2px solid green; */
     font-weight: 600;
+}
+
+* > .fa-solid,
+*:hover > .fa-regular {
+  display: none;
+}
+*:hover > .fa-solid {
+  display: inline-block;
+  color: #9356DC;
+}
+
+/* Menu pages */
+.card.selected {
+    /* border: 2px solid pink; */
+    border-radius: 0;
+    height: 100%;
+    background: #F6F6F6;
+    box-shadow: none;
+}
+
+.selected .img-container {
+    /* border: 2px solid green; */
+    margin-bottom: -20px;
+}
+
+.selected .restaurant-info {
+    /* border: 2px solid red; */
+    border-radius: 20px 20px 0 0;
+    padding: 20px 15px;
+    background: #F6F6F6;
+}
+
+.selected .restaurant-info h3 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.menu-container {
+    border: 2px solid blue;
+    text-align: start;
+    padding: 0 15px;
+    /* display: flex;
+    flex-direction: column;
+    gap: 30px; */
+}
+
+.menu-container > p {
+    white-space: nowrap;
+    /* border: 2px solid red; */
+    width: 60px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    box-shadow: -10px 12px 0px -10px #99E2D0;
+}
+
+.course {
+    /* border: 2px solid orange; */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    /* border: 2px solid red; */
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    align-items: center;
+    background: white;
+    overflow: hidden;
+    /* max-height: 73px; */
+}
+
+.menu-item > div {
+    /* border: 2px solid purple; */
+    padding: 8px 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu-item > div div {
+    /* border: 2px solid green; */
+    overflow: hidden;
+}
+
+.menu-item > div div p {
+    /* border: 2px solid pink; */
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu-item > div div p:first-child,
+.menu-item > div > p {
+    font-weight: 600;
+}
+
+.menu-item > div div p:first-child {
+    padding-bottom: 3px;
+}
+
+.menu-item i {
+    text-align: center;
+    /* min-width: 50px; */
+    width: 0px;
+    background: #99E2D0;
+    color: white;
+    padding: 18px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-item:hover i {
+    width: 50px;
 }
 
 /* Footer */
