@@ -17,6 +17,7 @@ body {
 .content {
     max-width: 412px;
     margin: 0 auto;
+    position: relative;
 }
 
 /* Header */
@@ -28,7 +29,6 @@ nav > :first-child {
     justify-content: center;
     padding: 12px 0;
     box-shadow: 0px 6px 4px -4px rgba(0,0,0,0.2);
-    z-index: 1;
 }
 
 nav img {
@@ -149,6 +149,20 @@ nav img {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.new {
+    border-radius: 2px;
+    text-align: center;
+    padding: 6px 25px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #99E2D0;
+    color: #26725e;
 }
 
 .img-container {
@@ -195,16 +209,16 @@ img[alt="image of the enchanted plate"] {
 }
 
 .restaurant-info button > .fa-solid,
-*.restaurant-info button:hover > .fa-regular {
+.restaurant-info button:hover > .fa-regular {
   display: none;
 }
 
 .restaurant-info button:hover > .fa-solid {
-  display: inline-block;
-  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    display: inline-block;
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Menu pages */
@@ -351,3 +365,54 @@ li a{
     text-decoration: none;
     color: white;
 }
+
+/* Skeleton animation */
+/* .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background: hsl(200, 20%, 95%);
+    }
+} */
+
+/* .modal {
+    border: 2px solid red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    z-index: 1;
+    opacity: 1;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #9356DC;
+    width: 150px;
+    height: 150px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } */
