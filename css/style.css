@@ -235,11 +235,12 @@ img[alt="image of the enchanted plate"] {
 /* Menu pages */
 .content.menu nav div {
     padding: 12px 15px;
+    /* border: 2px solid pink; */
     align-items: center;
 }
 
 .content.menu nav button {
-    margin-right: -18px;
+    /* margin-right: -100px; */
     background: white;
 }
 
@@ -394,17 +395,11 @@ li a{
 }
 
 @keyframes loader {
-    0% {
-        opacity: 1;
-    }
+    0% { opacity: 1; }
 
-    33% {
-        opacity: 0.6;
-    }
+    33% { opacity: 0.6; }
 
-    63% {
-        opacity: 0.3;
-    }
+    63% { opacity: 0.3; }
 
     100% {
         z-index: -1;
@@ -430,6 +425,7 @@ li a{
 @media all and (min-width: 412px) {
     .content {
         max-width: 1000px;
+        /* border: 2px solid red; */
     }
 
     .info > * {
@@ -458,17 +454,61 @@ li a{
         flex: 1 1;
     }
 
-    /* .menu-container {
+    /* Menu */
+    .menu nav div {
+        justify-content: space-between;
+    }
+
+    .content.menu nav img {
+        margin: 0;
+    }
+
+    .menu .selected {
+        max-width: 100%;
+    }
+
+    .course {
+        /* border: 2px solid red; */
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media all and (min-width: 550px) {
+    .selected .img-container {
+        max-height: 300px;
+    }
+}
+
+@media all and (min-width: 855px) {
+    .menu-container {
         display: flex;
         gap: 20px;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         justify-content: space-between;
-    } */
+    }
 
-    /* .course {
-        border: 2px solid blue;
+    .course {
+        /* border: 2px solid blue; */
         flex: 1 1;
         max-width: 300px;
         min-width: 260px;
-    } */
+    }
+
+    .selected .img-container {
+        max-height: 350px;
+    }
+}
+
+@media all and (min-width: 900px) {
+    .instructions {
+        justify-content: space-between;
+        flex-direction: row;
+        max-width: 100%;
+        gap: 30px;
+    }
+
+    .instructions > div {
+        flex: 1 1;
+    }
 }
