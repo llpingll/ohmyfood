@@ -19,12 +19,18 @@ body {
     max-width: 412px;
     margin: 0 auto;
     position: relative;
+    min-height: 100%;
+    /* height: 100%; */
     /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* .content > * {
-    border: 2px solid green;
-} */
+main {
+    flex-grow: 1;
+    background-color: #F6F6F6;
+}
 
 /* Header */
 nav > :first-child {
@@ -88,6 +94,7 @@ nav img {
     /* border: 2px solid red; */
     padding: 35px 15px;
     text-align: left;
+    background-color: white;
 }
 
 .instructions {
@@ -174,8 +181,11 @@ nav img {
 .img-container {
     /* border: 2px solid red; */
     /* 187.5 px */
-    flex-basis: 75%;
     overflow: hidden;
+}
+
+.selection .img-container {
+    flex-basis: 75%;
 }
 
 .card img {
@@ -197,9 +207,13 @@ img[alt="image of the enchanted plate"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
+    flex-grow: 0;
     padding: 0 15px;
     text-align: left;
+}
+
+.restaurants-container .restaurant-info {
+    flex-grow: 1;
 }
 
 .restaurant-info div p:first-child {
@@ -260,13 +274,24 @@ img[alt="image of the enchanted plate"] {
     /* border: 2px solid green; */
     margin-bottom: -20px;
     max-height: 220px;
+    /* flex-shrink: 1; */
+    /* flex-grow: 1; */
 }
 
 .selected .restaurant-info {
+    display: block;
     /* border: 2px solid red; */
     border-radius: 20px 20px 0 0;
     padding: 20px 15px 0 15px;
     background: #F6F6F6;
+}
+
+.selected .restaurant-info div {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .selected .restaurant-info h3 {
@@ -276,7 +301,6 @@ img[alt="image of the enchanted plate"] {
 }
 
 .menu-container {
-    /* border: 2px solid blue; */
     text-align: start;
     padding: 0 15px;
 }
@@ -342,12 +366,18 @@ img[alt="image of the enchanted plate"] {
 }
 
 .menu-item i {
+    /* border: 2px solid red; */
     text-align: center;
     width: 0px;
     background: #99E2D0;
     color: white;
     padding: 18px 0;
     transition: all 0.3s ease-in-out;
+}
+
+.choc i {
+    padding: 28px 0;
+    /* border: 2px solid red; */
 }
 
 .menu-item:hover i {
@@ -425,7 +455,6 @@ li a{
 @media all and (min-width: 412px) {
     .content {
         max-width: 1000px;
-        /* border: 2px solid red; */
     }
 
     .info > * {
@@ -468,7 +497,6 @@ li a{
     }
 
     .course {
-        /* border: 2px solid red; */
         max-width: 500px;
         margin: 0 auto;
     }
@@ -481,22 +509,25 @@ li a{
 }
 
 @media all and (min-width: 855px) {
+    .selected .restaurant-info div {
+        max-width: 100%;
+    }
+
     .menu-container {
         display: flex;
         gap: 20px;
-        /* border: 2px solid red; */
         justify-content: space-between;
     }
 
     .course {
-        /* border: 2px solid blue; */
         flex: 1 1;
         max-width: 300px;
         min-width: 260px;
     }
 
     .selected .img-container {
-        max-height: 350px;
+        max-height: 500px;
+        min-height: 500px;
     }
 }
 
