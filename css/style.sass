@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap')
+
+*, *::before, *::after
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+body
+  font-family: 'Roboto', sans-serif
+  height: 100vh
+  text-align: center
+
+.content
+  max-width: 412px
+  margin: 0 auto
+  position: relative
+  min-height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+// Header
+nav
+  > :first-child
+    position: relative
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: 12px 0
+    box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.2)
+
+  img
+    width: 140px
+
+.location
+  background: #EAEAEA
+  display: flex
+  justify-content: center
+  padding: 12px 0
+  gap: 10px
+
+  p
+    font-weight: 500
+
+.explore
+  background-color: #F6F6F6
+  padding: 30px 0 50px
+
+  p
+    color: #313131c2
+    padding: 35px 0
+
+  a
+    text-decoration: none
+    padding: 12px
+    border-radius: 24px
+    color: white
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC)
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2)
+    min-width: 189px
+
+// Info (How it works)
+.info
+  padding: 35px 15px
+  text-align: left
+  background-color: white
+
+.instructions
+  padding: 20px 0 20px 10px
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+  div
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2)
+    border-radius: 20px
+    display: flex
+    justify-content: center
+    padding: 18px 0px
+    background: #F6F6F6
+    gap: 30px
+    justify-content: flex-start
+    align-items: center
+    cursor: pointer
+    transition: transform 0.3s ease-in-out
+
+    &:hover
+      transform: scale(1.05)
+      background: rgba(147, 86, 220, 0.15)
+
+  p:first-child
+    background: hwb(267 34% 14%)
+    font-size: 14px
+    color: white
+    border-radius: 12px
+    padding: 3px 7px
+    margin-left: -12px
+
+  div:hover i
+    color: #9356DC
+
+// Restaurants
+.selection
+  text-align: left
+  padding: 25px 15px
+  background: #F6F6F6
+
+.restaurants-container
+  margin: 15px 0
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+.card
+  height: 250px
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2)
+  border-radius: 20px
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  text-decoration: none
+  color: black
+  position: relative
+
+.new
+  border-radius: 2px
+  text-align: center
+  padding: 6px 25px
+  position: absolute
+  right: 15px
+  top: 15px
+  background: #99E2D0
+  color: #26725e
+
+.img-container
+  overflow: hidden
+
+.selection .img-container
+  flex-basis: 75%
+
+.card img
+  object-fit: cover
+  width: 100%
+  margin-top: -60px
+
+img[alt="image of the enchanted plate"]
+  margin-top: -170px
+
+.card i
+  font-size: 20px
+
+.restaurant-info
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-grow: 0
+  padding: 0 15px
+  text-align: left
+
+.restaurants-container .restaurant-info
+  flex-grow: 1
+
+.restaurant-info
+  div p:first-child
+    font-weight: 600
+
+  button
+    border: none
+    background-color: #F6F6F6
+    cursor: pointer
+
+.content.menu nav button
+  border: none
+  background-color: #F6F6F6
+  cursor: pointer
+
+.restaurant-info button
+  .fa-regular
+    margin-right: -3.6px
+
+  > .fa-solid
+    margin-left: -20px
+    transition: opacity 0.4s ease-in
+    opacity: 0
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC))
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+  &:hover > .fa-solid
+    opacity: 1
+
+// Menu pages
+.content.menu nav
+  div
+    padding: 12px 15px
+    align-items: center
+
+  button
+    background: white
+
+  img
+    margin: 0 auto
+
+.card.selected
+  border-radius: 0
+  height: 100%
+  background: #F6F6F6
+  box-shadow: none
+
+.selected
+  .img-container
+    margin-bottom: -20px
+    max-height: 220px
+
+  > button
+    text-decoration: none
+    padding: 12px
+    border-radius: 24px
+    color: white
+    background-image: linear-gradient(to bottom right, #FF79DA , #9356DC)
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2)
+    min-width: 189px
+    border: none
+    align-self: center
+    margin: 40px 0 60px 0
+    cursor: pointer
+
+  .restaurant-info
+    display: block
+    border-radius: 20px 20px 0 0
+    padding: 20px 15px 0 15px
+    background: #F6F6F6
+
+    div
+      display: flex
+      justify-content: space-between
+      max-width: 500px
+      margin: 0 auto
+
+    h3
+      font-family: 'Shrikhand', cursive
+      font-weight: 500
+      font-size: 25px
+
+.menu-container
+  text-align: start
+  padding: 0 15px
+
+.course
+  > p
+    white-space: nowrap
+    width: 60px
+    padding-bottom: 5px
+    margin: 30px 0 0 0
+    box-shadow: -10px 12px 0px -10px #99E2D0
+
+  display: flex
+  flex-direction: column
+  gap: 15px
+
+.menu-item
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2)
+  display: flex
+  justify-content: space-between
+  border-radius: 15px
+  align-items: center
+  background: white
+  overflow: hidden
+
+  > div
+    padding: 8px 10px
+    flex-grow: 1
+    display: flex
+    justify-content: space-between
+    align-items: end
+    overflow: hidden
+    cursor: pointer
+
+    div
+      overflow: hidden
+
+      p
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+
+        &:first-child
+          font-weight: 600
+          padding-bottom: 3px
+
+    > p
+      font-weight: 600
+
+  i
+    text-align: center
+    width: 0px
+    background: #99E2D0
+    color: white
+    padding: 18px 0
+    transition: all 0.3s ease-in-out
+
+.choc i
+  padding: 28px 0
+
+.menu-item:hover i
+  width: 50px
+
+// Footer
+footer
+  text-align: left
+  background: #353535
+  color: white
+  padding: 20px
+
+  p
+    font-family: 'Shrikhand', cursive
+    margin-bottom: 10px
+    font-size: 18px
+
+li
+  padding: 5px 0
+  list-style: none
+
+  a
+    text-decoration: none
+    color: white
+
+.modal
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  transition: 0.5s ease
+  display: flex
+  justify-content: center
+  background: white
+  z-index: 1
+  opacity: 1
+  animation: loader 2s forwards 2s
+
+@keyframes loader
+  0%
+    opacity: 1
+
+  33%
+    opacity: 0.6
+
+  63%
+    opacity: 0.3
+
+  100%
+    z-index: -1
+    opacity: 0
+
+.loader
+  margin-top: 450px
+  border: 16px solid #f3f3f3
+  border-radius: 50%
+  border-top: 16px solid #9356DC
+  width: 150px
+  height: 150px
+  animation: spin 2s forwards infinite
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+@media all and (min-width: 412px)
+  .content
+    max-width: 1000px
+
+  .info > *
+    max-width: 500px
+    text-align: center
+    margin: 0 auto
+
+  .selection > *, footer > *
+    max-width: 100%
+    text-align: center
+
+  .restaurants-container
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 20px
+
+  .card
+    max-width: 500px
+    min-width: 370px
+    margin: 0 auto
+    flex: 1 1
+
+  // menu
+  .menu nav div
+    justify-content: space-between
+
+  .content.menu nav img
+    margin: 0
+
+  .menu .selected
+    max-width: 100%
+
+  .course
+    max-width: 500px
+    margin: 0 auto
+
+@media all and (min-width: 550px)
+  .selected .img-container
+    max-height: 300px
+
+@media all and (min-width: 855px)
+  .selected .restaurant-info div
+    max-width: 100%
+
+  .menu-container
+    display: flex
+    gap: 20px
+    justify-content: space-between
+
+  .course
+    flex: 1 1
+    max-width: 300px
+    min-width: 260px
+
+  .selected .img-container
+    max-height: 500px
+    min-height: 500px
+
+@media all and (min-width: 900px)
+  .instructions
+    justify-content: space-between
+    flex-direction: row
+    max-width: 100%
+    gap: 30px
+
+    > div
+      flex: 1 1
