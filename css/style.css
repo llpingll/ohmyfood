@@ -12,7 +12,6 @@ body {
 }
 
 .content {
-  max-width: 412px;
   margin: 0 auto;
   position: relative;
   min-height: 100%;
@@ -101,6 +100,11 @@ nav img {
 }
 .instructions div:hover i {
   color: #9356DC;
+}
+
+main {
+  flex-grow: 1;
+  background-color: #F6F6F6;
 }
 
 .selection {
@@ -397,8 +401,9 @@ li a {
   }
 }
 @media all and (min-width: 412px) {
-  .content {
+  .selection {
     max-width: 1000px;
+    margin: 0 auto;
   }
   .info > * {
     max-width: 500px;
@@ -463,10 +468,13 @@ li a {
   .instructions {
     justify-content: space-between;
     flex-direction: row;
-    max-width: 100%;
     gap: 30px;
+    max-width: 1000px;
   }
   .instructions > div {
     flex: 1 1;
+  }
+  .content.menu {
+    max-width: 1000px;
   }
 }/*# sourceMappingURL=style.css.map */

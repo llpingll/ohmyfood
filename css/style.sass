@@ -11,7 +11,7 @@ body
   text-align: center
 
 .content
-  max-width: 412px
+  // max-width: 100%
   margin: 0 auto
   position: relative
   min-height: 100%
@@ -100,6 +100,10 @@ nav
     color: #9356DC
 
 // Restaurants
+main
+  flex-grow: 1
+  background-color: #F6F6F6
+
 .selection
   text-align: left
   padding: 25px 15px
@@ -371,8 +375,9 @@ li
     transform: rotate(360deg)
 
 @media all and (min-width: 412px)
-  .content
+  .selection
     max-width: 1000px
+    margin: 0 auto
 
   .info > *
     max-width: 500px
@@ -435,8 +440,17 @@ li
   .instructions
     justify-content: space-between
     flex-direction: row
-    max-width: 100%
     gap: 30px
+    max-width: 1000px
 
     > div
       flex: 1 1
+
+  .content.menu
+    max-width: 1000px
+
+// @media all and (min-width: 1000px)
+//   .content.menu
+//     max-width: 100%
+
+//   main
