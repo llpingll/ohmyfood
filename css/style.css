@@ -493,20 +493,20 @@ li a {
 }
 @media all and (min-width: 1200px) {
   .selected .img-container {
-    max-height: 600px;
-    min-height: 600px;
+    max-height: 650px;
+    min-height: 650px;
   }
 }
 @media all and (min-width: 1400px) {
   .selected .img-container {
-    max-height: 700px;
-    min-height: 700px;
+    max-height: 800px;
+    min-height: 800px;
   }
 }
 @media all and (min-width: 1700px) {
   .selected .img-container {
-    max-height: 800px;
-    min-height: 800px;
+    max-height: 1000px;
+    min-height: 1000px;
   }
   .selected .restaurant-info {
     min-width: 1700px;
