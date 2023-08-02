@@ -1,4 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.6;
+  }
+  63% {
+    opacity: 0.3;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
@@ -29,7 +68,7 @@ nav > :first-child {
   box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.2);
 }
 nav img {
-  width: 140px;
+  width: 180px;
 }
 
 .location {
@@ -182,22 +221,16 @@ img[alt="image of the enchanted plate"] {
 .restaurant-info div p:first-child {
   font-weight: 600;
 }
-.restaurant-info button {
+.restaurant-info div:nth-child(2) {
   border: none;
   background-color: #F6F6F6;
   cursor: pointer;
 }
 
-.content.menu nav button {
-  border: none;
-  background-color: #F6F6F6;
-  cursor: pointer;
+.restaurant-info div .fa-regular {
+  margin-right: -3.5px;
 }
-
-.restaurant-info button .fa-regular {
-  margin-right: -3.6px;
-}
-.restaurant-info button > .fa-solid {
+.restaurant-info div > .fa-solid {
   margin-left: -20px;
   transition: opacity 0.4s ease-in;
   opacity: 0;
@@ -206,16 +239,16 @@ img[alt="image of the enchanted plate"] {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant-info button:hover > .fa-solid {
+.restaurant-info div:hover > .fa-solid {
   opacity: 1;
 }
 
 .content.menu nav div {
   padding: 12px 15px;
   align-items: center;
-}
-.content.menu nav button {
-  background: white;
+  max-width: 1700px;
+  margin: 0 auto;
+  font-size: 18px;
 }
 .content.menu nav img {
   margin: 0 auto;
@@ -251,7 +284,7 @@ img[alt="image of the enchanted plate"] {
   padding: 20px 15px 0 15px;
   background: #F6F6F6;
 }
-.selected .restaurant-info div {
+.selected .restaurant-info > div {
   display: flex;
   justify-content: space-between;
   max-width: 500px;
@@ -266,6 +299,7 @@ img[alt="image of the enchanted plate"] {
 .menu-container {
   text-align: start;
   padding: 0 15px;
+  animation: fadein 2s forwards;
 }
 
 .course {
@@ -340,11 +374,11 @@ footer {
 footer p {
   font-family: "Shrikhand", cursive;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 li {
-  padding: 5px 0;
+  padding: 10px 0;
   list-style: none;
 }
 li a {
@@ -367,21 +401,6 @@ li a {
   animation: loader 2s forwards 2s;
 }
 
-@keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  33% {
-    opacity: 0.6;
-  }
-  63% {
-    opacity: 0.3;
-  }
-  100% {
-    z-index: -1;
-    opacity: 0;
-  }
-}
 .loader {
   margin-top: 450px;
   border: 16px solid #f3f3f3;
@@ -392,14 +411,6 @@ li a {
   animation: spin 2s forwards infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @media all and (min-width: 412px) {
   .selection {
     max-width: 1000px;
