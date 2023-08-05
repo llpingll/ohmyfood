@@ -4,17 +4,22 @@
 @keyframes fadein
   0%
     opacity: 0
-    transform: translateY(100%)
 
   30%
-    opacity: .2
+    opacity: 0
+    transform: translateY(15%)
 
-  60%
+  80%
     opacity: .4
+    // transform: translateY(5%)
 
   100%
     opacity: 1
     transform: translateY(0)
+
+@keyframes fadeout
+  100%
+    height: 0px
 
 
 @keyframes loader
@@ -262,6 +267,7 @@ img[alt="image of the enchanted plate"]
     align-self: center
     margin: 40px 0 60px 0
     cursor: pointer
+    z-index: 1
 
   .restaurant-info
     display: block
@@ -284,6 +290,17 @@ img[alt="image of the enchanted plate"]
   text-align: start
   padding: 0 15px
   animation: fadein 2s forwards
+  position: relative
+
+.fade
+  position: absolute
+  left: 0
+  bottom: -30px
+  width: 100%
+  height: 100%
+  animation: fadeout 2.5s forwards
+  background: #F6F6F6
+  z-index: 1
 
 .course
   > p
@@ -488,10 +505,6 @@ li
     min-height: 800px
 
 @media all and (min-width: 1700px)
-  .selected .img-container
-    max-height: 1000px
-    min-height: 1000px
-  
   .selected .restaurant-info
     min-width: 1700px
     margin: 0 auto
